@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+ 
+    <h:body>
+        
+          <div class="wrapper row1">
+            <header id="header" class="hoc clear">                
+
+            </header>
+        </div>
+
+      <div class="container">
+          <p:dataTable var ="docente" value ="#{docenteBean.docentes}"
+                         rows="10"
+                         paginator="true" 
+                         paginatorPosition="bottom"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="5,10,15">
+                <f:facet name="header">
+                    LISTADO DE DOCENTES
+
+                </f:facet>
+                <p:column  headerText="codAlumno">
+                    #{docente.codDocente}
+                </p:column>
+                <p:column  headerText="Nombre">
+                    #{docente.nombre}
+                </p:column>
+                <p:column  headerText="Direccion">
+                    #{docente.direccion}
+                </p:column>
+                <p:column  headerText="Telefono">
+                    #{docente.telefono}
+                </p:column>
+                <p:column  headerText="Correo">
+                    #{docente.correoElectronico}
+                </p:column>
+                
+            </p:dataTable>	
+        </div>
+       
+    </h:body>
+</html>
+
