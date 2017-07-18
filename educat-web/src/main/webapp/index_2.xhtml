@@ -19,30 +19,34 @@
         </div>
 
       <div class="container">
-          <p:dataTable var ="docente" value ="#{docenteBean.docentes}"
+          <p:dataTable var ="curso" value ="#{cursoBean.curso}"
                          rows="10"
                          paginator="true" 
                          paginatorPosition="bottom"
                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowsPerPageTemplate="5,10,15">
                 <f:facet name="header">
-                    LISTADO DE DOCENTES
+                    LISTADO DE CURSOS
 
                 </f:facet>
-                <p:column  headerText="codDocente">
-                    #{docente.codDocente}
+                <p:column  headerText="codCurso">
+                    #{curso.codCurso}
+                </p:column>
+                <p:column  headerText="Descripcion">
+                    #{curso.descripcion}
+                </p:column>
+                <p:column  headerText="Duracion">
+                    #{curso.duracion}
+                </p:column>
+                <p:column  headerText="estado">
+                    #{curso.estado}
                 </p:column>
                 <p:column  headerText="Nombre">
-                    #{docente.nombre}
+                    #{curso.nombre}
                 </p:column>
-                <p:column  headerText="Direccion">
-                    #{docente.direccion}
-                </p:column>
-                <p:column  headerText="Telefono">
-                    #{docente.telefono}
-                </p:column>
-                <p:column  headerText="Correo">
-                    #{docente.correoElectronico}
+              
+                 <p:column  headerText="Objetivo">
+                    #{curso.objetivo}
                 </p:column>
                 
             </p:dataTable>	
