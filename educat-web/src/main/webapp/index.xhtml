@@ -7,20 +7,21 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title>Facelet Title</title>
-        <link href="layout/style.css" rel="stylesheet" type="text/css"/>
+        <title>INNOVAMENTE - Alumnos</title>
+<!--        <link href="layout/style.css" rel="stylesheet" type="text/css"/>-->
+        <img src="images/demo/innovamente_logo4.png"/>
     </h:head>
- 
+
     <h:body>
-        
-          <div class="wrapper row1">
+
+        <div class="wrapper row1">
             <header id="header" class="hoc clear">                
 
             </header>
         </div>
 
-      <div class="container">
-          <p:dataTable var ="alumno" value ="#{alumnoBean.alumnos}"
+        <div class="container">
+            <p:dataTable var ="alumno" value ="#{alumnoBean.alumnos}"
                          rows="10"
                          paginator="true" 
                          paginatorPosition="bottom"
@@ -53,7 +54,7 @@
                 </p:column>
             </p:dataTable>	
         </div>
-       
+
     </h:body>
 </html>
 
